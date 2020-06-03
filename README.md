@@ -1,8 +1,12 @@
 # herolo-msg-api
 
+small project that demonstrate Dockerizing Flask with Postgres. 
+The flask rest-api app connected to a postgres server running on the host. 
+Our application had a two Docker containers that combined to one docker-compose.yml which define that flask server is depend on postgres db service.
+
 ## How to run:
 
-1. `git clone` the project.
+1. `git clone` the project and cd to project file directory
 2. Install [Docker](https://docs.docker.com/install/), if you don't already have it,
 3. Build the image and once the image is built, run the container:
 ```
@@ -25,7 +29,7 @@ i used [Talend API Tester](https://chrome.google.com/webstore/detail/talend-api-
 
 ``` [HTTP POST] http://localhost:8000/api/add_message```
 
-with body like attached below will add a msg to message database
+with body like attached below 
 
 ```
 {
