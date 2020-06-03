@@ -1,0 +1,19 @@
+version: '3'
+services:
+    server:
+        build: .
+        command: python manage.py runserver -h 0.0.0.0 --port=8000
+        ports:
+            - 8000:8000
+        environment:
+            - FLASK_APP=app.py
+        env_file:
+            - .env
+        depends_on:
+            - db
+    db:
+        image: postgres
+        environment:
+            - POSTGRES_USER=evgeni
+            - POSTGRES_PASSWORD=password
+            - POSTGRES_DB=herolodb
