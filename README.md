@@ -46,13 +46,13 @@ will add this message to message db table with status 'unread' and return inform
 ### read message
 ```[HTTP GET] http://localhost:8000/api/get_message/1```
 
-will mark message with id 2 as read and return all message info:
+will mark message with id 1 as read and return all message info:
 
 ```
 {
 "msg":{
     "creation_date": "03/06/2020 11:54:10",
-    "id": 2,
+    "id": 1,
     "msg_content": "content of zero msg",
     "receiver": "evgeni",
     "sender": "eva",
